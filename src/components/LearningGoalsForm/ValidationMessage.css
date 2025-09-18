@@ -1,0 +1,37 @@
+.validation-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  animation: slideIn 0.2s ease-out;
+}
+
+.validation-message--error {
+  color: var(--error);
+}
+
+.validation-message--success {
+  color: var(--success);
+}
+
+.validation-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.validation-text {
+  line-height: 1.4;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

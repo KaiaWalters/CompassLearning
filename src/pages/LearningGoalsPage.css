@@ -1,0 +1,59 @@
+.learning-goals-page {
+  min-height: 100vh;
+  background: var(--neutral-50);
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-purple) 100%);
+  color: white;
+  padding: 120px 0 80px 0; /* Extra padding to account for fixed navbar */
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.page-header p {
+  margin: 0;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.page-content {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 100px 0 60px 0;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .page-header p {
+    font-size: 1.1rem;
+  }
+  
+  .page-content {
+    padding: 2rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}

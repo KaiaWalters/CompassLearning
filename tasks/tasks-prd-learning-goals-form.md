@@ -1,0 +1,181 @@
+# Tasks: Learning Goals Assessment Form
+
+## Relevant Files
+
+- `src/components/LearningGoalsForm/LearningGoalsForm.jsx` - Main multi-step form component that orchestrates the entire learning goals assessment flow
+- `src/components/LearningGoalsForm/LearningGoalsForm.css` - Styles for the main form component
+- `src/components/LearningGoalsForm/LearningGoalsForm.test.jsx` - Unit tests for the main form component
+- `src/components/LearningGoalsForm/FormStep.jsx` - Reusable component for individual form steps with navigation
+- `src/components/LearningGoalsForm/FormStep.css` - Styles for form step component
+- `src/components/LearningGoalsForm/FormStep.test.jsx` - Unit tests for form step component
+- `src/components/LearningGoalsForm/ProgressIndicator.jsx` - Component for showing form completion progress
+- `src/components/LearningGoalsForm/ProgressIndicator.css` - Styles for progress indicator
+- `src/components/LearningGoalsForm/ProgressIndicator.test.jsx` - Unit tests for progress indicator
+- `src/components/LearningGoalsForm/steps/PersonalInfoStep.jsx` - Step 1: Personal information and learning domains
+- `src/components/LearningGoalsForm/steps/PersonalInfoStep.css` - Styles for personal info step
+- `src/components/LearningGoalsForm/steps/PersonalInfoStep.test.jsx` - Unit tests for personal info step
+- `src/components/LearningGoalsForm/steps/SkillAssessmentStep.jsx` - Step 2: Current skill level assessment
+- `src/components/LearningGoalsForm/steps/SkillAssessmentStep.css` - Styles for skill assessment step
+- `src/components/LearningGoalsForm/steps/SkillAssessmentStep.test.jsx` - Unit tests for skill assessment step
+- `src/components/LearningGoalsForm/steps/LearningGoalsStep.jsx` - Step 3: Learning goals and timeline
+- `src/components/LearningGoalsForm/steps/LearningGoalsStep.css` - Styles for learning goals step
+- `src/components/LearningGoalsForm/steps/LearningGoalsStep.test.jsx` - Unit tests for learning goals step
+- `src/components/LearningGoalsForm/steps/LearningStyleStep.jsx` - Step 4: Learning style and preferences
+- `src/components/LearningGoalsForm/steps/LearningStyleStep.css` - Styles for learning style step
+- `src/components/LearningGoalsForm/steps/LearningStyleStep.test.jsx` - Unit tests for learning style step
+- `src/components/LearningGoalsForm/steps/ConstraintsStep.jsx` - Step 5: Time and resource constraints
+- `src/components/LearningGoalsForm/steps/ConstraintsStep.css` - Styles for constraints step
+- `src/components/LearningGoalsForm/steps/ConstraintsStep.test.jsx` - Unit tests for constraints step
+- `src/components/LearningGoalsForm/steps/MotivationStep.jsx` - Step 6: Motivation and previous experience
+- `src/components/LearningGoalsForm/steps/MotivationStep.css` - Styles for motivation step
+- `src/components/LearningGoalsForm/steps/MotivationStep.test.jsx` - Unit tests for motivation step
+- `src/components/LearningGoalsForm/steps/ReviewStep.jsx` - Step 7: Review and submit
+- `src/components/LearningGoalsForm/steps/ReviewStep.css` - Styles for review step
+- `src/components/LearningGoalsForm/steps/ReviewStep.test.jsx` - Unit tests for review step
+- `src/components/LearningGoalsForm/steps/AISummaryStep.jsx` - Step 8: AI-generated summary display
+- `src/components/LearningGoalsForm/steps/AISummaryStep.css` - Styles for AI summary step
+- `src/components/LearningGoalsForm/steps/AISummaryStep.test.jsx` - Unit tests for AI summary step
+- `src/components/ErrorPage/ErrorPage.jsx` - Cute error page component for AI failures and timeouts
+- `src/components/ErrorPage/ErrorPage.css` - Styles for error page
+- `src/components/ErrorPage/ErrorPage.test.jsx` - Unit tests for error page
+- `src/utils/formValidation.js` - Utility functions for form validation (email, dates, text length, etc.)
+- `src/utils/formValidation.test.js` - Unit tests for validation utilities
+- `src/utils/openaiService.js` - Service for OpenAI API integration and AI analysis
+- `src/utils/openaiService.test.js` - Unit tests for OpenAI service
+- `src/hooks/useFormState.js` - Custom hook for managing form state across steps
+- `src/hooks/useFormState.test.js` - Unit tests for form state hook
+- `src/App.jsx` - Main app component (needs modification to include learning goals form route)
+- `src/components/Navbar/navbar.jsx` - Navigation component (needs modification for learning platform branding)
+- `src/components/Navbar/navbar.css` - Navigation styles (needs modification for learning platform branding)
+- `src/components/Hero/hero.jsx` - Hero component (needs modification for learning platform content)
+- `src/components/Hero/hero.css` - Hero styles (needs modification for learning platform content)
+- `package.json` - Dependencies file (needs OpenAI API client added)
+- `.env` - Environment variables file (needs OpenAI API key configuration)
+
+### Notes
+
+- Unit tests should typically be placed alongside the code files they are testing (e.g., `MyComponent.jsx` and `MyComponent.test.jsx` in the same directory).
+- Use `npm test` to run tests. The project uses Vite, so testing setup may need to be configured.
+- The existing component structure follows a pattern of individual component directories with `.jsx` and `.css` files.
+- The project uses React 19.1.1 with Vite as the build tool.
+
+## Tasks
+
+- [ ] 1.0 Project Setup and Dependencies
+  - [ ] 1.1 Install OpenAI API client library (`npm install openai`)
+  - [ ] 1.2 Create `.env` file with `VITE_OPENAI_API_KEY` environment variable
+  - [ ] 1.3 Update `vite.config.js` to handle environment variables properly
+  - [ ] 1.4 Create `src/utils/openaiService.js` for API integration
+  - [ ] 1.5 Set up basic error handling for API calls
+  - [ ] 1.6 Create `src/hooks/useFormState.js` custom hook for form state management
+  - [ ] 1.7 Create `src/utils/formValidation.js` utility file for validation functions
+
+- [ ] 2.0 Branding and Visual Design Transformation
+  - [ ] 2.1 Replace church logo with learning platform logo in `src/assets/`
+  - [ ] 2.2 Update `src/components/Navbar/navbar.jsx` to remove church content and add learning platform navigation
+  - [ ] 2.3 Modify `src/components/Navbar/navbar.css` to use education-focused color scheme
+  - [ ] 2.4 Update `src/components/Hero/hero.jsx` to display learning platform messaging instead of church content
+  - [ ] 2.5 Modify `src/components/Hero/hero.css` to match new learning platform branding
+  - [ ] 2.6 Update `src/App.jsx` to remove church-specific components (Programs, History, Gallery)
+  - [ ] 2.7 Create new learning platform color variables in `src/index.css`
+  - [ ] 2.8 Update typography and spacing to match learning platform aesthetic
+
+- [ ] 3.0 Form Infrastructure and State Management
+  - [ ] 3.1 Create `src/components/LearningGoalsForm/` directory structure
+  - [ ] 3.2 Build `src/components/LearningGoalsForm/LearningGoalsForm.jsx` main component with step navigation
+  - [ ] 3.3 Create `src/components/LearningGoalsForm/FormStep.jsx` reusable step wrapper component
+  - [ ] 3.4 Implement `src/components/LearningGoalsForm/ProgressIndicator.jsx` with completion percentage
+  - [ ] 3.5 Add step navigation logic (Previous/Next buttons) with validation checks
+  - [ ] 3.6 Implement session-based data persistence using `useFormState` hook
+  - [ ] 3.7 Create form submission handler that collects all step data
+  - [ ] 3.8 Add loading states for form submission and AI processing
+
+- [ ] 4.0 Form Validation System
+  - [ ] 4.1 Implement email format validation in `src/utils/formValidation.js`
+  - [ ] 4.2 Create date validation for timeline fields (future dates only)
+  - [ ] 4.3 Add range validation for skill assessments (1-5 scale)
+  - [ ] 4.4 Implement text length validation (min 10, max 500 characters)
+  - [ ] 4.5 Create required field validation with clear error messages
+  - [ ] 4.6 Add real-time validation with visual feedback (red borders, error text)
+  - [ ] 4.7 Implement validation state management across form steps
+  - [ ] 4.8 Create validation error display components with helpful messaging
+
+- [ ] 5.0 Individual Form Steps Implementation
+  - [ ] 5.1 Create `src/components/LearningGoalsForm/steps/PersonalInfoStep.jsx` (Step 1)
+    - [ ] 5.1.1 Add form fields: name, email, age range, location
+    - [ ] 5.1.2 Implement learning domain selection (academic, professional, personal, technical certifications)
+    - [ ] 5.1.3 Add conditional logic for domain-specific questions
+    - [ ] 5.1.4 Apply validation for required fields
+  - [ ] 5.2 Create `src/components/LearningGoalsForm/steps/SkillAssessmentStep.jsx` (Step 2)
+    - [ ] 5.2.1 Implement 5-point scale rating system for skill levels
+    - [ ] 5.2.2 Add skill categories based on selected learning domains
+    - [ ] 5.2.3 Create visual rating interface (stars, sliders, or buttons)
+    - [ ] 5.2.4 Add tooltips and help text for each skill category
+  - [ ] 5.3 Create `src/components/LearningGoalsForm/steps/LearningGoalsStep.jsx` (Step 3)
+    - [ ] 5.3.1 Add text areas for detailed goal descriptions
+    - [ ] 5.3.2 Implement date picker for target completion dates
+    - [ ] 5.3.3 Create goal prioritization system
+    - [ ] 5.3.4 Add character count validation for text areas
+  - [ ] 5.4 Create `src/components/LearningGoalsForm/steps/LearningStyleStep.jsx` (Step 4)
+    - [ ] 5.4.1 Add learning style assessment (visual, auditory, kinesthetic, reading/writing)
+    - [ ] 5.4.2 Implement resource preference selection (videos, articles, interactive content, group learning)
+    - [ ] 5.4.3 Create preference ranking system
+    - [ ] 5.4.4 Add examples and explanations for each option
+  - [ ] 5.5 Create `src/components/LearningGoalsForm/steps/ConstraintsStep.jsx` (Step 5)
+    - [ ] 5.5.1 Add hours per week selection interface
+    - [ ] 5.5.2 Implement preferred study times selection
+    - [ ] 5.5.3 Add duration preference options
+    - [ ] 5.5.4 Create constraint priority system
+  - [ ] 5.6 Create `src/components/LearningGoalsForm/steps/MotivationStep.jsx` (Step 6)
+    - [ ] 5.6.1 Add motivation factor assessment questions
+    - [ ] 5.6.2 Implement learning challenge identification
+    - [ ] 5.6.3 Create previous experience evaluation
+    - [ ] 5.6.4 Add support system and accountability questions
+  - [ ] 5.7 Create `src/components/LearningGoalsForm/steps/ReviewStep.jsx` (Step 7)
+    - [ ] 5.7.1 Display all form responses in organized sections
+    - [ ] 5.7.2 Add edit functionality for each section
+    - [ ] 5.7.3 Implement form submission logic
+    - [ ] 5.7.4 Add confirmation messaging and loading states
+  - [ ] 5.8 Create `src/components/LearningGoalsForm/steps/AISummaryStep.jsx` (Step 8)
+    - [ ] 5.8.1 Display AI-generated 4-sentence summary
+    - [ ] 5.8.2 Show learning style alignment insights
+    - [ ] 5.8.3 Display constraint and preference insights
+    - [ ] 5.8.4 Add "Return to Home" functionality
+
+- [ ] 6.0 AI Integration and Error Handling
+  - [ ] 6.1 Implement OpenAI API integration in `src/utils/openaiService.js`
+    - [ ] 6.1.1 Create prompt engineering for learning analysis
+    - [ ] 6.1.2 Implement API call with 30-second timeout
+    - [ ] 6.1.3 Add retry logic for failed requests
+    - [ ] 6.1.4 Parse and format AI responses
+  - [ ] 6.2 Create `src/components/ErrorPage/ErrorPage.jsx` for AI failures
+    - [ ] 6.2.1 Design cute, friendly error messaging
+    - [ ] 6.2.2 Add "Return to Home" button functionality
+    - [ ] 6.2.3 Implement retry option for AI analysis
+    - [ ] 6.2.4 Create different error states (timeout, API failure, network error)
+  - [ ] 6.3 Integrate error handling throughout form flow
+    - [ ] 6.3.1 Add error boundaries around AI integration
+    - [ ] 6.3.2 Implement loading states during AI processing
+    - [ ] 6.3.3 Add user-friendly error messages for all failure scenarios
+
+- [ ] 7.0 Responsive Design and Mobile Optimization
+  - [ ] 7.1 Test form on mobile devices and tablets
+  - [ ] 7.2 Optimize form layout for small screens (mobile-first approach)
+  - [ ] 7.3 Adjust navigation buttons for touch interfaces
+  - [ ] 7.4 Optimize text input areas and form fields for mobile
+  - [ ] 7.5 Ensure progress indicators are visible and functional on mobile
+  - [ ] 7.6 Test and fix validation messages display on small screens
+  - [ ] 7.7 Optimize AI summary display for mobile reading
+  - [ ] 7.8 Ensure error pages work well on all device sizes
+
+- [ ] 8.0 Testing and Quality Assurance
+  - [ ] 8.1 Set up testing framework (Jest/Vitest) if not already configured
+  - [ ] 8.2 Write unit tests for all form validation utilities
+  - [ ] 8.3 Create unit tests for each form step component
+  - [ ] 8.4 Test OpenAI service integration with mock responses
+  - [ ] 8.5 Test error handling components and scenarios
+  - [ ] 8.6 Test form state management and navigation
+  - [ ] 8.7 Test responsive design across different screen sizes
+  - [ ] 8.8 Test accessibility compliance (WCAG 2.1 AA)
+  - [ ] 8.9 Test browser compatibility (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+)
+  - [ ] 8.10 Conduct end-to-end testing of complete form flow

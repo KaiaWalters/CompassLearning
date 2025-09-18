@@ -1,0 +1,128 @@
+.skill-assessment-step {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step-intro {
+  background: var(--neutral-50);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.step-intro p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.skill-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.skill-category:hover {
+  border-color: var(--primary-blue);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+.skill-header h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.skill-description {
+  margin: 0 0 1rem 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.skill-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rating-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.rating-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.rating-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--neutral-300);
+  background: white;
+  border-radius: 50%;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-btn:hover {
+  border-color: var(--primary-blue);
+  background: var(--neutral-50);
+}
+
+.rating-btn.active {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: white;
+  transform: scale(1.1);
+}
+
+.rating-description {
+  text-align: center;
+  min-height: 1.5rem;
+}
+
+.current-level {
+  font-size: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 500;
+  background: var(--neutral-50);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .skill-category {
+    padding: 1rem;
+  }
+  
+  .rating-buttons {
+    gap: 0.25rem;
+  }
+  
+  .rating-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}

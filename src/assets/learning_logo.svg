@@ -1,0 +1,7 @@
+<svg width="150" height="60" viewBox="0 0 150 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="150" height="60" rx="8" fill="#2563EB"/>
+  <circle cx="30" cy="30" r="12" fill="white"/>
+  <path d="M25 30L28 33L35 26" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="50" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">LearnPath</text>
+  <text x="50" y="40" font-family="Arial, sans-serif" font-size="10" fill="#E5E7EB">AI-Powered Learning</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect x="0" y="0" width="300" height="120" fill="#000000"/>
+  
+  <!-- Church building on the left -->
+  <g transform="translate(80, 60)">
+    <!-- Main church body -->
+    <rect x="-25" y="-15" width="50" height="30" fill="none" stroke="#ffffff" stroke-width="2"/>
+    
+    <!-- Church roof -->
+    <polygon points="-30,-15 0,-35 30,-15" fill="none" stroke="#ffffff" stroke-width="2"/>
+    
+    <!-- Church door -->
+    <rect x="-6" y="-3" width="12" height="18" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="3" cy="3" r="1" fill="#ffffff"/>
+    
+    <!-- Church windows -->
+    <rect x="-18" y="-8" width="6" height="10" fill="none" stroke="#ffffff" stroke-width="1"/>
+    <rect x="12" y="-8" width="6" height="10" fill="none" stroke="#ffffff" stroke-width="1"/>
+    
+    <!-- Window cross details -->
+    <line x1="-15" y1="-8" x2="-15" y2="2" stroke="#ffffff" stroke-width="0.8"/>
+    <line x1="-18" y1="-3" x2="-12" y2="-3" stroke="#ffffff" stroke-width="0.8"/>
+    <line x1="15" y1="-8" x2="15" y2="2" stroke="#ffffff" stroke-width="0.8"/>
+    <line x1="12" y1="-3" x2="18" y2="-3" stroke="#ffffff" stroke-width="0.8"/>
+  </g>
+  
+  <!-- Cross on top of church -->
+  <g transform="translate(80, 25)">
+    <!-- Vertical part of cross -->
+    <rect x="-1.5" y="-12" width="3" height="24" fill="#ffffff"/>
+    <!-- Horizontal part of cross -->
+    <rect x="-6" y="-3" width="12" height="3" fill="#ffffff"/>
+  </g>
+  
+  <!-- Church name text to the right -->
+  <text x="130" y="45" font-family="Times, serif" font-size="28" font-weight="bold" fill="#ffffff">St. JOHN</text>
+  <text x="130" y="75" font-family="Times, serif" font-size="28" font-weight="bold" fill="#ffffff">St. JAMES</text>
+  
+  <!-- Roxbury text below both image and main text -->
+  <text x="150" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff" letter-spacing="2px">ROXBURY</text>
+</svg>

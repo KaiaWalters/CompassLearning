@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+  /* Learning Platform Color Palette */
+  --primary-blue: #2563EB;
+  --primary-blue-dark: #1D4ED8;
+  --secondary-green: #10B981;
+  --accent-purple: #8B5CF6;
+  --neutral-50: #F9FAFB;
+  --neutral-100: #F3F4F6;
+  --neutral-200: #E5E7EB;
+  --neutral-300: #D1D5DB;
+  --neutral-400: #9CA3AF;
+  --neutral-500: #6B7280;
+  --neutral-600: #4B5563;
+  --neutral-700: #374151;
+  --neutral-800: #1F2937;
+  --neutral-900: #111827;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --background: #FFFFFF;
+  --surface: #F9FAFB;
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: "Inter", "Nunito Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-primary);
+    background-color: var(--background);
+    line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  background: var(--primary-blue);
+  color: white; 
+  padding: 12px 24px; 
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 0; 
+  outline: 0;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--primary-blue-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.features-section {
+  padding: 120px 0 80px 0;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--neutral-200);
+  transition: all 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
