@@ -14,3 +14,5 @@ const ValidationMessage = ({ message, type = 'error' }) => {
 };
 
 export default ValidationMessage;
+
+
