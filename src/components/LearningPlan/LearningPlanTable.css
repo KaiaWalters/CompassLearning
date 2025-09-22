@@ -1,0 +1,302 @@
+.learning-plan-table {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* AI Summary Section */
+.ai-summary-section {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.summary-toggle {
+  width: 100%;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  color: #495057;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.summary-toggle:hover {
+  background: #e9ecef;
+}
+
+.toggle-icon {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.summary-content {
+  padding: 0 20px 20px;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* Plan Overview */
+.plan-overview {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.plan-overview h2 {
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+.overview-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 16px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: bold;
+  color: #3498db;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Table Controls */
+.table-controls {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-group label {
+  font-weight: 500;
+  color: #495057;
+  font-size: 14px;
+}
+
+.control-group select {
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+  color: #495057;
+}
+
+.control-group select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Table Container */
+.table-container {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.learning-tasks-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.learning-tasks-table th {
+  background: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 2px solid #e9ecef;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.learning-tasks-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: top;
+}
+
+.task-row:hover {
+  background: #f8f9fa;
+}
+
+.task-row.status-completed {
+  background: #f8fff8;
+}
+
+.task-row.status-in_progress {
+  background: #fff8f0;
+}
+
+/* Task Content */
+.task-title {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.task-description {
+  color: #6c757d;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Status Select */
+.status-select {
+  padding: 4px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Resources */
+.resources {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.resource-link {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 2px 0;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.resource-link:hover {
+  border-bottom-color: #3498db;
+  text-decoration: none;
+}
+
+/* Actions */
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: #f8d7da;
+}
+
+/* No Tasks State */
+.no-tasks {
+  text-align: center;
+  padding: 48px 20px;
+  color: #6c757d;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .learning-plan-table {
+    padding: 12px;
+  }
+  
+  .overview-stats {
+    gap: 24px;
+  }
+  
+  .stat-number {
+    font-size: 24px;
+  }
+  
+  .table-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .learning-tasks-table {
+    font-size: 12px;
+  }
+  
+  .learning-tasks-table th,
+  .learning-tasks-table td {
+    padding: 8px 6px;
+  }
+  
+  .task-title {
+    font-size: 13px;
+  }
+  
+  .task-description {
+    font-size: 11px;
+  }
+  
+  .tag {
+    font-size: 10px;
+    padding: 1px 6px;
+  }
+}

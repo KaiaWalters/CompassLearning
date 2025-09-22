@@ -1,6 +1,15 @@
 import './AISummaryStep.css';
+import { useNavigate } from 'react-router-dom';
 
 const AISummaryStep = ({ summary, isGenerating, error, onRetry, onStartOver }) => {
+  const navigate = useNavigate();
+
+  const handleViewLearningPlan = () => {
+    // Save AI summary to session storage
+    sessionStorage.setItem('learning_goals_ai_summary', summary);
+    // Navigate to learning plan page
+    navigate('/learning-plan');
+  };
   if (error) {
     return (
       <div className="ai-summary-step error-state">
@@ -93,8 +102,8 @@ const AISummaryStep = ({ summary, isGenerating, error, onRetry, onStartOver }) =
           <button onClick={onStartOver} className="btn-secondary">
             Create New Plan
           </button>
-          <button className="btn-primary">
-            Download Plan
+          <button onClick={handleViewLearningPlan} className="btn-primary">
+            View Learning Plan
           </button>
         </div>
       </div>

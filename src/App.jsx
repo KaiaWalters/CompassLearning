@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/navbar.jsx'
 import Hero from './components/Hero/hero.jsx'
 import LearningGoalsPage from './pages/LearningGoalsPage.jsx'
+import LearningPlanPage from './pages/LearningPlanPage.jsx'
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             </>
           } />
           <Route path="/learning-goals" element={<LearningGoalsPage />} />
+          <Route path="/learning-plan" element={<LearningPlanPage />} />
         </Routes>
       </div>
     </Router>
