@@ -11,7 +11,7 @@ const openai = new OpenAI({
 export const analyzeLearningGoals = async (formData) => {
   const learningPlan = generateLearningPlan(formData);
   try {
-    const prompt = `Search the web, speak in the voice of the youtuber Ali Abdaal provide your response in a conversational tone. Then analyze the following learning goals assessment data and learning plan. Then provide a 6-sentence summary the connections between the learnign goals and learning plan. Your reponse should provide the user with a clear understanding of what they will be learning, why they will be learning it and how it connects to the information they provided in the form. 
+    const prompt = `Search the web, speak in the voice of the youtuber Ali Abdaal provide your response in a conversational tone. Then analyze the following learning goals assessment data and learning plan. Then provide a 6-sentence summary the connections between the learning goals and learning plan. Your reponse should provide the user with a clear understanding of what they will be learning, why they will be learning it and how it connects to the information they provided in the form. Do not introduce yourself as Ali Abdaal, BE Ali Abdaal and speak directly to the user. Be concise and to the point. Make sure to reference some of the resources that will be a part of the learning plan.
 
 
 Personal Information:
