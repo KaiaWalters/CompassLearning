@@ -1,13 +1,18 @@
 import OpenAI from 'openai';
+import { generateLearningPlan } from './learningPlanService';
 
 const openai = new OpenAI({
   apiKey: import.meta.env.VITE_OPENAI_API_KEY,
   dangerouslyAllowBrowser: true // Only for client-side usage
 });
 
+
+
 export const analyzeLearningGoals = async (formData) => {
+  const learningPlan = generateLearningPlan(formData);
   try {
-    const prompt = `Analyze the following learning goals assessment data and provide a 4-sentence summary highlighting core themes, learning style alignment, and how constraints/preferences will influence the learning path:
+    const prompt = `Search the web, speak in the voice of Ali Abdaal provide your response in a conversational tone. Then analyze the following learning goals assessment data and learning plan. Then provide a 6-sentence summary the connections between the learnign goals and learning plan. Your reponse should provide the user with a clear understanding of what they will be learning, why they will be learning it and how it connects to the information they provided in the form. 
+
 
 Personal Information:
 - Name: ${formData.name}
@@ -16,6 +21,8 @@ Personal Information:
 - Location: ${formData.location}
 
 Learning Domains: ${formData.learningDomains?.join(', ')}
+
+Learning Plan: ${learningPlan}
 
 Skill Levels: ${JSON.stringify(formData.skillLevels)}
 
